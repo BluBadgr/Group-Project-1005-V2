@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JakeY World Facts Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale@=1.0">
+    <link rel="stylesheet" href="A3_QuizStyle.css">
+</head>
+
+<body>
+    <header>
+        <h1><b>Quiz of Random World Facts</b></h1>
+        <p>This quiz is about world facts. Test your knowledge!</p>
+
+    </header>
+    <!--<div id="container"> -->
+    <div class="quizBody">
+        <div class="quizStartOptions">
+            <div id="quizStartTriggerEasyMode">
+                <p>Click To Start Quiz <br> (Easier - 25s to Answer Question)</p>
+            </div>
+            <div id="quizStartTrigger">
+                <p>Click To Start Quiz <br>(Harder - 10s to Answer Question)</p>
+            </div>
+        </div>
+        <div id="websiteQuiz">
+            <!--Multiple Choice Question-->
+            <div id="questionText"></div>
+            <div id="questionThumbnail"></div>
+            <!--Multiple Choice options-->
+            <div id="theOptions">
+                <div class="optionX" id="A" onclick="checkUserAnswer('A')"></div>
+                <div class="optionX" id="B" onclick="checkUserAnswer('B')"></div>
+                <div class="optionX" id="C" onclick="checkUserAnswer('C')"></div>
+                <div class="optionX" id="D" onclick="checkUserAnswer('D')"></div>
+            </div>
+            <!--Quiz Countdown-->
+            <div id="timer">
+                <div id="timerCounter"></div>
+            </div>
+            <!--Quiz progression/What Question user is on-->
+            <div id="quizProgression"></div>
+            <div id="quizResults"></div>
+            <!--Footer buttons of "retry" and "show answer"-->
+            <div class="footerButtons">
+                <button id="retryButton" onClick="refreshPage()">Retry</button>
+                <button id="showAnswerButton" onclick="revealAnswerPopup()">Show Answer</button>
+            </div>
+        </div>
+
+        <script src="A3_QuizMechanics.js"></script>
+    </div>
+</body>
+
+</html>
